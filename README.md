@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Couchsurfing Social App
 
-## Getting Started
+A basic social network interface built with Next.js using the App Router, Server Components, and dynamic API routes.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Brief
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For this exercise, I built a basic social network interface using Next.js with the App Router, Server Components, and dynamic API routes. The focus was on delivering a functional application within a two-hour timeframe. Below is a summary of my approach:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Architecture & Functionality:**  
+  I structured the app with a global layout that includes a header (with an SVG logo and navigation), a main content area, and a footer. The application features a home page, a user profile page, and a posts list with dynamic post detail pages. API routes simulate backend data for user information and posts.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Dynamic Data & Routing:**  
+  Dynamic routes were implemented for post details, and data fetching is done server-side using Next.js's built-in fetch API. I built the absolute URLs dynamically using request headers (via `headers()`) so the app works on any domain/port without hardcoding.
 
-## Learn More
+- **Styling & User Experience:**  
+  Tailwind CSS was used for styling, allowing for a responsive and modern UI. I used flexbox utilities to align the post title and author correctly.
 
-To learn more about Next.js, take a look at the following resources:
+- **Assumptions & Decisions:**  
+  The data is simulated (mock data), and I focused primarily on core functionality and code quality within the two-hour limit. I prioritized a clean, functional implementation over exhaustive detail.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Challenges:**  
+  A key challenge was managing dynamic routes—especially using the `[id]` folder to capture URL parameters—and constructing absolute URLs dynamically without hardcoding values. This was addressed by using Next.js’s `headers()` function to determine the host and protocol at runtime.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+*Note: I created this project a few days ago, but due to my current heavy workload, I haven't had the opportunity to further enhance it. I focused on meeting the main requirements and ensuring the core functionality works well. I hope you appreciate my approach and effort, and I look forward to the opportunity to discuss it further.*
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Technologies Used
+Next.js with the App Router,
+ReactJS,
+TypeScript,
+Tailwind CSS for styling,
+Turbopack for development bundling.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
